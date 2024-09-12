@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HeroRectangleOne from "../assets/images/rectangleO.png";
 import HeroRectangleTwo from "../assets/images/rectangleT.png";
 import Button from "../components/buttons.tsx";
@@ -15,6 +15,16 @@ import "../styles/hero.css";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    useEffect(() =>{
+        
+        if(showMobileMenu){
+            //mudar o style do html para overflow-y hidden
+        } else {
+            //voltar overflow-y
+        }
+
+    },[showMobileMenu])
 
     return (
         <>
@@ -97,7 +107,7 @@ export default function Home() {
                     <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.
                     </p>
                     <div className="flex gap-1">
-                        <span><Button text="Cadastre-se" /></span>
+                        <span><Button text="Cadastre-se"/></span>
                         <span className="desktop-only">
                             <Button text="Veja mais" secondary />
                         </span>

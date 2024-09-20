@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import HeroRectangleOne from "../assets/images/rectangleO.png";
+import Coleira from "../assets/images/Coleira.png"
 import HeroRectangleTwo from "../assets/images/rectangleT.png";
 import Button from "../components/buttons.tsx";
 import Logo from "../assets/LogoAL.svg";
@@ -10,21 +10,22 @@ import "../styles/header.css";
 import "../styles/buttons.css";
 import "../styles/index.css";
 import "../styles/hero.css";
+import "../styles/cards.css";
 
 
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-    useEffect(() =>{
-        
-        if(showMobileMenu){
+    useEffect(() => {
+
+        if (showMobileMenu) {
             //mudar o style do html para overflow-y hidden
         } else {
             //voltar overflow-y
         }
 
-    },[showMobileMenu])
+    }, [showMobileMenu])
 
     return (
         <>
@@ -98,20 +99,26 @@ export default function Home() {
                 <span className="desktop-only">
                     <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" />
                 </span>
-                <img src={HeroRectangleOne} alt="Retangulo dois tela inicial" />
+                <img src={Coleira} alt="Retangulo dois tela inicial" />
                 <div className="container content">
                     <p className="desktop-only">
                         Olá
                     </p>
-                    <h1>Comida de mãe direto no seu apê, é só pedir que entregamos para você!</h1>
-                    <p>Já pensou em matar a saudade daquela comida caseira? O melhor de tudo, nossas receitas são 100% saudáveis, bora entrar no shape.
-                    </p>
+                    <h1>AnimalLife</h1>
+                    <p>Segurança e cuidado na palma da sua mão.</p>
                     <div className="flex gap-1">
-                        <span><Button text="Cadastre-se"/></span>
+                        <span><Button text="Cadastre-se" /></span>
                         <span className="desktop-only">
                             <Button text="Veja mais" secondary />
                         </span>
                     </div>
+                </div>
+            </section>
+            <section id="Cards">
+                <div className="Painel">
+                    <div className="card">teste</div>
+                    <div className="card">teste</div>    
+                    <div className="card">teste</div>
                 </div>
             </section>
         </>

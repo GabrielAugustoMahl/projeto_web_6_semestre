@@ -18,8 +18,8 @@
     --second-text-color: #737373;
     --ligth-text-color: #FFF;
     --ligth-gray: #F8F8F8;
-    --primary-color: #23A6F0 ;
-    --secondary-color: #B2E3FF ;
+    --primary-color: #5BAF33 ;
+    --secondary-color: #A3DB5E ;
 
     --ff-sans: "Montserrat", system-ui, sans-serif;
     --fw-base: 400;
@@ -45,7 +45,6 @@ html {
     font-size: var(--fs-base);
     line-height: 1.6;
     color: var(--text-color);
-    
     overflow-x: hidden;
     scroll-behavaior: smooth;
 }

@@ -1,17 +1,58 @@
+@media (width <=1280px) {
+.Cards {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.Painel {
+    display: flex;
+}
+
+.card {
+    flex: 0 0 100%; /* Faz com que cada card ocupe 100% da largura da tela */
+    scroll-snap-align: start;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Remove a barra de rolagem em navegadores modernos */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+}
+
 .Cards{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .Painel{
     background: var(--light-gray);
     border-top: 0.125rem solid #e4e4e4;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
 .card{
     display: flex;
     flex-direction: column;
@@ -19,14 +60,16 @@
     width: 30%;
     height: 85%;
     background-color: var(--bg-color);
-    border-radius: 0.50rem;
+    border-radius: 0.75rem;
     border-bottom: 1rem solid;
     border-color: var(--secondary-color);
     box-shadow: 0px 0px 12px 0px #bbbbbb;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.imagem{
-    margin-top: 3rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+.card>img{
+max-width: 80%;
+max-height: 80%;
 }

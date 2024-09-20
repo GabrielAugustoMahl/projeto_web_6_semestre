@@ -20,9 +20,9 @@ export default function Home() {
     useEffect(() => {
 
         if (showMobileMenu) {
-            //mudar o style do html para overflow-y hidden
+            document.documentElement.style.overflowY = 'hidden';
         } else {
-            //voltar overflow-y
+            document.documentElement.style.overflowY = 'auto'; 
         }
 
     }, [showMobileMenu])
@@ -99,7 +99,7 @@ export default function Home() {
                 <span className="desktop-only">
                     <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" />
                 </span>
-                <img src={Coleira} alt="Coleira" />
+                <img src={Coleira} alt="Coleira" className="desktop-only" />
                 <div className="container content">
                     <p className="desktop-only">
                         Olá
@@ -116,24 +116,20 @@ export default function Home() {
             </section>
             <section className="Cards">
                 <h1>Sob medida para você</h1>
-                <div className="Painel">
-                    <div className="card">
-                        <div className="imagem">
+                <div className="carousel" >
+                    <div className="Painel">
+                        <div className="card">
                             <img src={Coleira} alt="Coleira" />
+                            <p>Melhor coleira de monitoramento do Brasil!</p>
                         </div>
-                        <p>Melhor coleira de monitoramento do Brasil</p>
-                    </div>
-                    <div className="card">
-                        <div className="imagem">
+                        <div className="card">
                             <img src={Coleira} alt="Coleira" />
+                            <p>Melhor coleira de monitoramento do Brasil!</p>
                         </div>
-                        <p>Melhor coleira de monitoramento do Brasil</p>
-                    </div>
-                    <div className="card">
-                        <div className="imagem">
+                        <div className="card">
                             <img src={Coleira} alt="Coleira" />
+                            <p>Melhor coleira de monitoramento do Brasil!</p>
                         </div>
-                        <p>Melhor coleira de monitoramento do Brasil</p>
                     </div>
                 </div>
             </section>

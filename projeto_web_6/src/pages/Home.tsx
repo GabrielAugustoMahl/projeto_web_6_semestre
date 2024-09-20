@@ -99,7 +99,7 @@ export default function Home() {
                 <span className="desktop-only">
                     <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" />
                 </span>
-                <img src={Coleira} alt="Retangulo dois tela inicial" />
+                <img src={Coleira} alt="Coleira" />
                 <div className="container content">
                     <p className="desktop-only">
                         Olá
@@ -114,11 +114,27 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id="Cards">
+            <section className="Cards">
+                <h1>Sob medida para você</h1>
                 <div className="Painel">
-                    <div className="card">teste</div>
-                    <div className="card">teste</div>    
-                    <div className="card">teste</div>
+                    <div className="card">
+                        <div className="imagem">
+                            <img src={Coleira} alt="Coleira" />
+                        </div>
+                        <p>Melhor coleira de monitoramento do Brasil</p>
+                    </div>
+                    <div className="card">
+                        <div className="imagem">
+                            <img src={Coleira} alt="Coleira" />
+                        </div>
+                        <p>Melhor coleira de monitoramento do Brasil</p>
+                    </div>
+                    <div className="card">
+                        <div className="imagem">
+                            <img src={Coleira} alt="Coleira" />
+                        </div>
+                        <p>Melhor coleira de monitoramento do Brasil</p>
+                    </div>
                 </div>
             </section>
         </>

@@ -1,0 +1,35 @@
+.EntreContato{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.EntreContato p {
+    width: 60%;
+    text-align: center;
+}
+
+.EntreContato input {
+    color: var(--second-text-color);
+    background-color: var(--ligth-gray);
+    width: 60%;
+    border-radius: 0.5rem;
+    height: 4rem;
+    padding: 1rem;
+    border: 2px solid rgba(230, 230, 230, 1);
+}
+
+.EntreContato button{
+    color: var(--ligth-text-color);
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    height: 4rem;
+    width: 13rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+

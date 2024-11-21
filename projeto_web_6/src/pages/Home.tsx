@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useRef,useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Coleira from "../assets/images/Coleira.png"
@@ -11,7 +11,9 @@ import Close from "../assets/close.svg";
 import Person from "../assets/images/Person.svg"
 import Checkmark from "../assets/images/Checkmark.svg"
 import Stars from "../assets/images/stars.svg"
+import RedeSocial from "../assets/images/Redes sociais.svg"
 import "../styles/utility.css";
+import "../styles/contato.css";
 import "../styles/header.css";
 import "../styles/buttons.css";
 import "../styles/index.css";
@@ -19,12 +21,18 @@ import "../styles/hero.css";
 import "../styles/cards.css";
 import "../styles/avaliacao.css";
 import "../styles/Planos.css";
+import "../styles/rodape.css";
 
 
 
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const cardsSectionRef = useRef<HTMLDivElement>(null);
+    const testimonialsSectionRef = useRef<HTMLDivElement>(null);
+    const pricingSectionRef = useRef<HTMLDivElement>(null);
+    const contactSectionRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
 
@@ -35,6 +43,12 @@ export default function Home() {
         }
 
     }, [showMobileMenu])
+
+    const handleScrollToSection = (sectionRef: React.RefObject<HTMLDivElement>) => {
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    };
 
     const settings = {
         useCSS: true,
@@ -57,23 +71,23 @@ export default function Home() {
         <>
             <header className="container py-sm">
                 <nav className="flex items-center justify-between">
-                    <img src={Logo} alt="Logo DonaFrost" width={220} height={80} />
+                    <img src={Logo} alt="Logo AnimalLife" width={220} height={80} />
                     <div className="desktop-only">
                         <ul className="flex gap-1">
                             <li>
                                 <a href="#">Home</a>
                             </li>
                             <li>
-                                <a href="#solution">Soluções</a>
+                                <a href="#solution" onClick={() => handleScrollToSection(cardsSectionRef)}>Soluções</a>
                             </li>
                             <li>
-                                <a href="#testimonials">Depoimentos</a>
+                                <a href="#testimonials" onClick={() => handleScrollToSection(testimonialsSectionRef)}>Depoimentos</a>
                             </li>
                             <li>
-                                <a href="#pricing">Preços</a>
+                                <a href="#pricing" onClick={() => handleScrollToSection(pricingSectionRef)}>Preços</a>
                             </li>
                             <li>
-                                <a href="#contact">Contato</a>
+                                <a href="#contact"onClick={() => handleScrollToSection(contactSectionRef)}>Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -140,7 +154,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="Cards">
+            <section className="Cards" ref={cardsSectionRef}>
                 <h1>Sob medida para você</h1>
                 <div className="carousel" >
                     <div className="Painel">
@@ -159,7 +173,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="avaliacao">
+            <section className="avaliacao" ref={testimonialsSectionRef}>
                 <div className="Pavaliacao">
                     <p>Conselho de quem conhece</p>
                     <h1>Cada Cliente Importa</h1>
@@ -197,7 +211,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="Planos">
+            <section className="Planos"ref={pricingSectionRef}>
                 <p>Planos e preços</p>
                 <h1>Nossos planos</h1>
                 <div className="Cardplanos">
@@ -260,8 +274,45 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section >
-
+            <section className="Contato" ref={contactSectionRef}>
+                <div className="EntreContato">
+                    <p>Envie sua duvida</p>
+                    <h1>Entre em contato</h1>
+                    <p>Entre em contato, estamos dispostos a tirar qualquer dúvida, seja um orçamento, uma dúvida técnica de algum de nossos produtos. Estamos à disposição para responder.😎</p>
+                    <input type="text" />
+                    <input type="text" />
+                    <button>Enviar</button>
+                </div>
+            </section>
+            <section className="rodape">
+                <div className="rodapeinfos">
+                    <div className="infos">
+                        <img src={Logo} alt="Logo AnimalLife" width={100} height={100} />
+                        <img src={RedeSocial} alt="Redes_Sociais" width={120} height={80} />
+                    </div>
+                    <div className="infos">
+                        <h2>Empresa</h2>
+                        <p>Sobre nós</p>
+                        <p>Faça parte do time</p>
+                        <p>Blog</p>
+                    </div>
+                    <div className="infos">
+                        <h2>Funcionalidades</h2>
+                        <p>Marketing</p>
+                        <p>Análise de dados</p>
+                        <p>Boot discord</p>
+                    </div>
+                    <div className="infos">
+                        <h2>Recursos</h2>
+                        <p>IOS & Android</p>
+                        <p>Teste a Demo</p>
+                        <p>Clientes</p>
+                        <p>API</p>
+                    </div>
+                </div>
+                <div className="pe">
+                    <p>Feito com amor na aula de Programação Web💙 ©2024 AktieTech - Todos os direitos reservados.</p>
+                </div>
             </section>
         </>
     );

@@ -1,0 +1,45 @@
+.Pavaliacao{
+    background-color: var(--secondary-color);
+    display: flex ;
+    flex-direction: column;
+    height: 80vh;
+    text-align: center; 
+    padding: 5%;
+}
+
+.Hcards {
+width: 100%;
+column-gap: 1rem;
+}
+
+.Hcard {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex !important;
+    height: 25rem; 
+    width: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-evenly;
+}
+
+.Person{
+    width: 30%;
+    height: 30%;
+}
+
+.Stars{
+    height: 10%;
+    width: 30%;
+}
+
+.Hcard p {
+    width: 50%;
+    height: 30%;
+}
+
+h4 {
+    font-weight: bold;
+}

@@ -1,0 +1,92 @@
+
+.Planos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    padding: 5rem;
+}
+
+.Cardplanos{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Cardplano{
+    width: 25rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    background-color: var(--ligth-gray);
+    padding: 2rem;
+    text-align: start;
+}
+
+h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h3{
+    margin-bottom: 1rem;
+}
+
+.Cardplano img {
+    height: 1rem;
+}
+
+.certo{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.certo img {
+    margin-right: 1rem;
+}
+
+.linha{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+button{
+    border-radius: 5px;
+    height: 3rem;
+    border-color: var(--secondary-color);
+    border-style: dashed;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+@media (width <=1280px) {
+    
+
+    .Planos{
+        width: 100%;
+        height: 300vh;
+        justify-content: space-around;
+        align-content: center;
+    }
+    
+    .Cardplanos {
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+    }
+}
+

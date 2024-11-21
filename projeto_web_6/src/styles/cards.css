@@ -18,7 +18,7 @@
 }
 
 .card {
-    flex: 0 0 100%; /* Faz com que cada card ocupe 100% da largura da tela */
+    flex: 0 0 100%;
     scroll-snap-align: start;
     padding: 1rem;
     box-sizing: border-box;
@@ -30,7 +30,6 @@
     max-height: 80%;
 }
 
-/* Remove a barra de rolagem em navegadores modernos */
 .carousel::-webkit-scrollbar {
     display: none;
 }
